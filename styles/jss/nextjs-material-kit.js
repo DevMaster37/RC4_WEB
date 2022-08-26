@@ -55,16 +55,16 @@ const containerFluid = {
 const container = {
   ...containerFluid,
   "@media (min-width: 576px)": {
-    maxWidth: "540px",
+    maxWidth: "700px",
   },
   "@media (min-width: 768px)": {
-    maxWidth: "720px",
+    maxWidth: "900px",
   },
   "@media (min-width: 992px)": {
-    maxWidth: "960px",
+    maxWidth: "1200px",
   },
   "@media (min-width: 1200px)": {
-    maxWidth: "1140px",
+    maxWidth: "1400px",
   },
 };
 
@@ -95,6 +95,7 @@ const warningColor = "#ff9800";
 const dangerColor = "#f44336";
 const successColor = "#4caf50";
 const infoColor = "#00C2FF";
+const darkBlueColor = "#174091";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
 
@@ -240,6 +241,7 @@ export {
   primaryColor,
   warningColor,
   dangerColor,
+  darkBlueColor,
   successColor,
   infoColor,
   roseColor,
