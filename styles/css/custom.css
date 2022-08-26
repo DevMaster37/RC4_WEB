@@ -1,0 +1,19 @@
+body {
+    background-color: white !important;
+}
+
+.max-width-unset {
+    max-width: unset !important;
+}
+
+.box-shadow-unset {
+    box-shadow: unset !important;
+}
+
+.mt-35px {
+    margin-top: 35px !important;
+}
+
+.mt-20px {
+    margin-top: 20px !important;
+}

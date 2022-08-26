@@ -67,8 +67,8 @@ export default function Header(props) {
     </Link>
   );
   return (
-    <AppBar className={appBarClasses}>
-      <Toolbar className={classes.container}>
+    <AppBar className={`${appBarClasses} box-shadow-unset`}>
+      <Toolbar className={`${classes.container} max-width-unset`}>
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (
