@@ -67,6 +67,7 @@ const homePageStyle = (theme) => ({
 
     // custom styles
     footerLink: {
+        cursor: "pointer",
         margin: "0px",
         padding: "0.9375rem",
         fontSize: "16px",
@@ -78,6 +79,23 @@ const homePageStyle = (theme) => ({
 
     footerContainer: {
         minHeight: "unset"
+    },
+
+    footerBox: {
+        padding: "40px 60px 10px 60px",
+        color: "black",
+        fontWeight: "600"
+    },
+
+    footerLinkList: {
+        marginTop: "10px",
+        listStyle: "none",
+        padding: "0"
+    },
+
+    footerLinkItem: {
+        display: "inline",
+        margin: "0 15px"
     }
 });
 

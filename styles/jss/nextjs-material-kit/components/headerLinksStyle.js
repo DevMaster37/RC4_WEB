@@ -37,19 +37,19 @@ const headerLinksStyle = (theme) => ({
     padding: "0 !important"
   },
   navLink: {
-    color: "inherit",
+    color: "black",
     position: "relative",
     padding: "0.9375rem",
-    fontWeight: "400",
-    fontSize: "12px",
-    textTransform: "uppercase",
+    fontWeight: "500",
+    fontSize: "14px",
     borderRadius: "3px",
     lineHeight: "20px",
     textDecoration: "none",
+    textTransform: "capitalize",
     margin: "0px",
     display: "inline-flex",
     "&:hover,&:focus": {
-      color: "inherit",
+      color: "black",
       background: "rgba(200, 200, 200, 0.2)"
     },
     [theme.breakpoints.down("sm")]: {
@@ -86,9 +86,9 @@ const headerLinksStyle = (theme) => ({
     },
     top: "3px",
     position: "relative",
-    fontWeight: "400",
-    fontSize: "12px",
-    textTransform: "uppercase",
+    fontWeight: "500",
+    fontSize: "14px",
+    textTransform: "capitalize",
     lineHeight: "20px",
     textDecoration: "none",
     margin: "0px",
