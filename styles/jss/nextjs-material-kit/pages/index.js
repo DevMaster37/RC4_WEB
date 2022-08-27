@@ -100,7 +100,19 @@ const indexPageStyle = (theme) => ({
         lineHeight: "30px",
         color: "white",
         fontWeight: 400,
-    }
+    },
+    featureSubBox: {
+
+    },
+    featureSubItem: {
+
+    },
+    featureSubImg: {
+
+    },
+    featureSubLabel: {
+
+    },
 });
 
 export default indexPageStyle;
