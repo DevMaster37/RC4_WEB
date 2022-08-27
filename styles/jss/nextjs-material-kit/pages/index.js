@@ -69,7 +69,7 @@ const indexPageStyle = (theme) => ({
         background: "linear-gradient(135deg, #C2FFD8 8.54%, #465EFB 100%)",
         width: "100%",
         borderRadius: "140px 0px 0px 0px",
-        minHeight: "360px",
+        minHeight: "420px",
         padding: "20px 60px"
     },
     featureTitle: {
@@ -79,7 +79,27 @@ const indexPageStyle = (theme) => ({
         lineHeight: "60px"
     },
     featuresBox: {
-
+        display: "flex",
+        marginTop: "30px",
+        justifyContent: "space-around",
+        width: "100%"
+    },
+    featuresItem: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    },
+    featureImg: {
+        width: "100px",
+        height: "100px",
+    },
+    featureLabel: {
+        marginTop: "20px",
+        fontSize: "22px",
+        textAlign: "center",
+        lineHeight: "30px",
+        color: "white",
+        fontWeight: 400,
     }
 });
 

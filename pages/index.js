@@ -70,7 +70,70 @@ export default function HomePage(props) {
             </div>
             <div className={classes.featuresContainer}>
                 <p className={`${classes.featureTitle} text-right text-white`}>FEATURES</p>
-                <div className={classes.featuresBox}></div>
+                <div className={classes.featuresBox}>
+                    <div className={classes.featuresItem}>
+                        <img
+                            className={classes.featureImg}
+                            src="/img/ic_secure_payment.svg"
+                            alt="trust pay"
+                        />
+                        <p className={classes.featureLabel}>
+                            <strong>
+                                100%<br/>
+                                Secure Payments<br/>
+                            </strong>
+                            Moving your card details<br/>
+                            to a much more<br/>
+                            secured place.
+                        </p>
+                    </div>
+                    <div className={classes.featuresItem}>
+                        <img
+                            className={classes.featureImg}
+                            src="/img/ic_trust.svg"
+                            alt="trust pay"
+                        />
+                        <p className={classes.featureLabel}>
+                            <strong>
+                                Trust pay<br/>
+                            </strong>
+                            100%<br/>
+                            Payment Protection.<br/>
+                            Easy refund.
+                        </p>
+                    </div>
+                    <div className={classes.featuresItem}>
+                        <img
+                            className={classes.featureImg}
+                            src="/img/ic_refer.svg"
+                            alt="trust pay"
+                        />
+                        <p className={classes.featureLabel}>
+                            <strong>
+                                Refer & Earn<br/>
+                            </strong>
+                            Invite a friend<br/>
+                            to sign up<br/>
+                            and earn up to<br/>
+                            NGN10000.
+                        </p>
+                    </div>
+                    <div className={classes.featuresItem}>
+                        <img
+                            className={classes.featureImg}
+                            src="/img/ic_support.svg"
+                            alt="trust pay"
+                        />
+                        <p className={classes.featureLabel}>
+                            <strong>
+                                24X7 Support<br/>
+                            </strong>
+                            We're here to help.<br/>
+                            Have a query<br/>
+                            and need help?
+                        </p>
+                    </div>
+                </div>
             </div>
             <FooterSection />
         </div>
