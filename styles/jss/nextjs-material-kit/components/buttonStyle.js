@@ -326,6 +326,13 @@ const buttonStyle = {
     lineHeight: "1.333333",
     borderRadius: "0.2rem"
   },
+  xl: {
+    padding: "1.125rem 3.5rem",
+    fontSize: "1.5rem",
+    lineHeight: "1.7",
+    borderRadius: "0.3rem",
+    fontWeight: "bold",
+  },
   sm: {
     padding: "0.40625rem 1.25rem",
     fontSize: "0.6875rem",
@@ -333,7 +340,7 @@ const buttonStyle = {
     borderRadius: "0.2rem"
   },
   round: {
-    borderRadius: "30px"
+    borderRadius: "48px"
   },
   block: {
     width: "100% !important"
@@ -367,6 +374,21 @@ const buttonStyle = {
       "& svg": {
         width: "32px",
         height: "32px"
+      }
+    },
+    "&$xl": {
+      height: "84px",
+      minWidth: "84px",
+      width: "84px",
+      lineHeight: "84px",
+      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+        fontSize: "48px",
+        fontWeight: "bold",
+        lineHeight: "84px"
+      },
+      "& svg": {
+        width: "48px",
+        height: "48px"
       }
     },
     "&$sm": {

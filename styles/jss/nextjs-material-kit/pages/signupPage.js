@@ -6,36 +6,32 @@ const signupPageStyle = {
     opacity: "0",
     transform: "translate3d(0, -60px, 0)"
   },
-  pageHeader: {
-    minHeight: "100vh",
-    height: "auto",
-    display: "inherit",
-    position: "relative",
-    margin: "0",
-    padding: "0",
-    border: "0",
+  centerContainer: {
+    display: "flex",
+    flexDirection: "column",
     alignItems: "center",
-    "&:before": {
-      background: "rgba(0, 0, 0, 0.5)"
-    },
-    "&:before,&:after": {
-      position: "absolute",
-      zIndex: "1",
-      width: "100%",
-      height: "100%",
-      display: "block",
-      left: "0",
-      top: "0",
-      content: '""'
-    },
-    "& footer li a,& footer li a:hover,& footer li a:active": {
-      color: "#FFFFFF"
-    },
-    "& footer": {
-      position: "absolute",
-      bottom: "0",
-      width: "100%"
-    }
+    justifyContent: "center"
+  },
+  bigText: {
+    fontFamily: "Poppins",
+    fontStyle: "normal",
+    fontWeight: "500",
+    fontSize: "64px",
+    lineHeight: "77px",
+    color: "#FFFFFF",
+  },
+  whiteButton: {
+    background: "white",
+    padding: "1.125rem 3.5rem",
+    fontSize: "1.5rem",
+    lineHeight: "1.7",
+    borderRadius: "48px",
+    fontWeight: "bold",
+    color: infoColor,
+    textAlign: "center",
+    whiteSpace: "nowrap",
+    display: "flex",
+    justifyContent: "center"
   },
   form: {
     margin: "0",
@@ -82,7 +78,7 @@ const signupPageStyle = {
     textAlign: "center"
   },
   cardFooter: {
-    paddingTop: "0rem",
+    paddingTop: "36px",
     border: "0",
     borderRadius: "6px",
     justifyContent: "center !important"
@@ -102,7 +98,7 @@ const signupPageStyle = {
     letterSpacing: "-0.045em",
     fontWeight: 500,
     background: "linear-gradient(135deg, #3C8CE7 0%, #00EAFF 100%) !important",
-    borderRadius: "0px 0px 0px 25%"
+    borderRadius: "0px 0px 25% 0px"
   },
 };
 

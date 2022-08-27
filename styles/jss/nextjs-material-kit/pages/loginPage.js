@@ -1,14 +1,7 @@
-import { container } from "/styles/jss/nextjs-material-kit.js";
+import { container, infoColor } from "/styles/jss/nextjs-material-kit.js";
 
-const signupPageStyle = {
-  container: {
-    ...container,
-    zIndex: "2",
-    position: "relative",
-    paddingTop: "20vh",
-    color: "#FFFFFF",
-    paddingBottom: "200px"
-  },
+const loginPageStyle = {
+  container,
   cardHidden: {
     opacity: "0",
     transform: "translate3d(0, -60px, 0)"
@@ -45,27 +38,43 @@ const signupPageStyle = {
     }
   },
   form: {
-    margin: "0"
+    margin: "0",
+  },
+  transparentCard: {
+    background: "transparent !important",
+    boxShadow: "none"
   },
   cardHeader: {
     width: "auto",
     textAlign: "center",
     marginLeft: "20px",
     marginRight: "20px",
-    marginTop: "-40px",
     padding: "20px 0",
+    marginTop: "20px",
     marginBottom: "15px"
   },
-  socialIcons: {
-    maxWidth: "24px",
-    marginTop: "0",
-    width: "100%",
-    transform: "none",
-    left: "0",
-    top: "0",
-    height: "100%",
+  avatar: {
+    width: "25%"
+  },
+  forgetPassword: {
+    color: "#174293 !important",
     lineHeight: "41px",
-    fontSize: "20px"
+    fontSize: "20px",
+    fontWeight: "450",
+    "&:hover": {
+      color: "#000 !important",
+      textDecoration: "underline"
+    }
+  },
+  signup: {
+    color: infoColor,
+    lineHeight: "41px",
+    fontSize: "20px",
+    fontWeight: "bold",
+    "&:hover": {
+      color: "#000 !important",
+      textDecoration: "underline"
+    }
   },
   divider: {
     marginTop: "30px",
@@ -85,7 +94,16 @@ const signupPageStyle = {
   },
   inputIconsColor: {
     color: "#495057"
-  }
+  },
+  signContainer: {
+    fontSize: "28px",
+    textAlign: "right",
+    lineHeight: "35px",
+    letterSpacing: "-0.045em",
+    fontWeight: 500,
+    background: "linear-gradient(135deg, #3C8CE7 0%, #00EAFF 100%) !important",
+    borderRadius: "0px 0px 0px 25%"
+  },
 };
 
-export default signupPageStyle;
+export default loginPageStyle;
