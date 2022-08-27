@@ -55,19 +55,25 @@ const containerFluid = {
 const container = {
   ...containerFluid,
   "@media (min-width: 576px)": {
-    maxWidth: "700px",
+    maxWidth: "540px",
   },
   "@media (min-width: 768px)": {
-    maxWidth: "900px",
+    maxWidth: "740px",
   },
   "@media (min-width: 992px)": {
-    maxWidth: "1200px",
+    maxWidth: "960px",
   },
-  "@media (min-width: 1200px)": {
-    maxWidth: "1400px",
+  "@media (min-width: 1240px)": {
+    maxWidth: "1280px",
   },
-  "@media (min-width: 1400px)": {
-    maxWidth: "1600px",
+  "@media (min-width: 1440px)": {
+    maxWidth: "1340px",
+  },
+  "@media (min-width: 1600px)": {
+    maxWidth: "1540px",
+  },
+  "@media (min-width: 1900px)": {
+    maxWidth: "1820px",
   },
 };
 

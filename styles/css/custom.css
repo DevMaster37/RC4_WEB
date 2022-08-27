@@ -118,3 +118,11 @@ body {
 .pt-15px {
     padding-top: 15px !important;
 }
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
