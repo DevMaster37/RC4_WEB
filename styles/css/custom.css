@@ -14,6 +14,10 @@ body {
     padding: 0px !important;
 }
 
+.p-64 {
+    padding: 64px !important;
+}
+
 .m-0 {
     margin: 0px !important;
 }
@@ -91,6 +95,14 @@ body {
 
 .fs-32 {
     font-size: 32px !important;
+}
+
+.fs-48 {
+    font-size: 48px !important;
+}
+
+.fs-64 {
+    font-size: 64px !important;
 }
 
 .fw-300 {
@@ -184,6 +196,10 @@ body {
 
 .justify-center {
     justify-content: center !important;
+}
+
+.justify-between {
+    justify-content: space-between !important;
 }
 
 .alert-info {

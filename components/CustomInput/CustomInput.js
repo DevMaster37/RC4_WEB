@@ -22,6 +22,7 @@ export default function CustomInput(props) {
     labelProps,
     inputProps,
     error,
+    none,
     white,
     inputRootCustomClasses,
     success
@@ -32,6 +33,7 @@ export default function CustomInput(props) {
     [" " + classes.labelRootSuccess]: success && !error
   });
   const underlineClasses = classNames({
+    [classes.underlineNone]: none,
     [classes.underlineError]: error,
     [classes.underlineSuccess]: success && !error,
     [classes.underline]: true,
@@ -87,5 +89,6 @@ CustomInput.propTypes = {
   inputRootCustomClasses: PropTypes.string,
   error: PropTypes.bool,
   success: PropTypes.bool,
-  white: PropTypes.bool
+  white: PropTypes.bool,
+  none: PropTypes.bool,
 };

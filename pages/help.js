@@ -61,76 +61,105 @@ export default function HelpPage(props) {
                 className={`${classes.navigation} ${classes.container}`}
             >
                 <HeaderSection isGuest={isGuest} />
-                <div className={classes.helpContainer}>
-                    <div className={classes.blueRect}></div>
-                    <div className={classes.whiteButton + " w-100 pt-64px"}>
+            </div>
+            <div className={classes.helpContainer}>
+                <div className={classes.blueRect}></div>
+                <GridItem xs={12} sm={12} md={8} className={"m-auto"}>
+                    <div className={classes.searchContainer}>
+                        <CustomInput
+                            id="regular"
+                            inputProps={{
+                                placeholder: "How can i help you?",
+                            }}
+                            none
+                            formControlProps={{
+                                fullWidth: true,
+                                underline: false
+                            }}
+                        />
                         <Button round color="primary" size="xl" onClick={search()}>
                             Search
                         </Button>
                     </div>
-                    <GridContainer justify="center" className={"mt-64px mb-48px"}>
-                        <GridItem xs={12} sm={12} md={4}>
-                            <Button color="white" size="xl" onClick={help()}>
-                                <img src="/img/ic_help.svg"/>
-                                <hr/>
-                                <p>
-                                    Help & Documentation<br/>
-                                    Receive payment from any bank,<br/>
-                                    Bank Deposit, transfer,<br/>
-                                    USSD etc
-                                </p>
+                    <GridContainer className={classes.whiteRect}>
+                        <GridItem className={classes.centerContainer} xs={12} sm={12} lg={4}>
+                            <Button className={classes.whiteShadowBox} color="white" size="xl" onClick={help()}>
+                                <div className={classes.centerContainer}>
+                                    <img className={classes.svgIcon} src="/img/ic_help.svg"/>
+                                    <hr className={classes.hr}/>
+                                    <p className={classes.colorPrimary + " fs-16"}>
+                                        <b>Help & Documentation</b><br/>
+                                        Receive payment from any bank,<br/>
+                                        Bank Deposit, transfer,<br/>
+                                        USSD etc
+                                    </p>
+                                    <p className="w-100 text-right text-primary fs-16">More>></p>
+                                </div>
                             </Button>
                         </GridItem>
-                        <GridItem xs={12} sm={12} md={4}>
-                            <Button color="white" size="xl" onClick={feedback()}>
-                                <img src="/img/ic_feedback.svg"/>
-                                <hr/>
-                                <p>
-                                    Feedback<br/>
-                                    Schedule Airtime and payment to<br/>
-                                    your staff, Friends and Family at<br/>
-                                    no extra cost
-                                </p>
+                        <GridItem className={classes.centerContainer} xs={12} sm={12} lg={4}>
+                            <Button className={classes.whiteShadowBox} color="white" size="xl" onClick={feedback()}>
+                                <div className={classes.centerContainer}>
+                                    <img className={classes.svgIcon} src="/img/ic_feedback.svg"/>
+                                    <hr className={classes.hr}/>
+                                    <p className={classes.colorPrimary + " fs-16"}>
+                                        <b>Feedback</b><br/>
+                                        Schedule Airtime and payment to<br/>
+                                        your staff, Friends and Family at<br/>
+                                        no extra cost
+                                    </p>
+                                    <p className="w-100 text-right text-primary fs-16">More>></p>
+                                </div>
                             </Button>
                         </GridItem>
-                        <GridItem xs={12} sm={12} md={4}>
-                            <Button color="white" size="xl" onClick={dev_resource()}>
-                                <img src="/img/ic_developer_resources.svg"/>
-                                <hr/>
-                                <p>
-                                    Developer Resources<br/>
-                                    Pay with your credit card<br/>
-                                    or Debit card at no<br/>
-                                    extracost
-                                </p>
+                        <GridItem className={classes.centerContainer} xs={12} sm={12} lg={4}>
+                            <Button className={classes.whiteShadowBox} color="white" size="xl" onClick={dev_resource()}>
+                                <div className={classes.centerContainer}>
+                                    <img className={classes.svgIcon} src="/img/ic_developer_resources.svg"/>
+                                    <hr className={classes.hr}/>
+                                    <p className={classes.colorPrimary + " fs-16"}>
+                                        <b>Developer Resources</b><br/>
+                                        Pay with your credit card<br/>
+                                        or Debit card at no<br/>
+                                        extracost
+                                    </p>
+                                    <p className="w-100 text-right text-primary fs-16">More>></p>
+                                </div>
                             </Button>
                         </GridItem>
                     </GridContainer>
-                    <GridContainer justify="center" className={"mt-64px mb-48px"}>
-                        <GridItem xs={12} sm={6} md={8} className={"text-primary"}>
+                    <div className={"d-flex justify-between mt-64px mb-48px"}>
+                        <div className={"text-primary fs-48"}>
                             Download<br/>
                             Recharge4 Mobile App<br/>
                             Now
-                        </GridItem>
-                        <GridItem xs={12} sm={6} md={4}>
-                            <Button round color="black" size="xl" onClick={download_apple()}>
-                                <img src="/img/ic_apple.svg"/>
-                                <p>
-                                    Download on thee<br/>
-                                    App Store
-                                </p>
-                            </Button>
-                            <Button round color="black" size="xl" onClick={download_google()}>
-                                <img src="/img/ic_google_play.svg"/>
-                                <p>
-                                    ANDROID APP ON<br/>
-                                    Google Play
-                                </p>
-                            </Button>
-                        </GridItem>
-                    </GridContainer>
-
-                </div>
+                        </div>
+                        <div xs={12} sm={6} md={4}>
+                            <div onClick={() => download_apple()} className={classes.complexBtn}>
+                                <img
+                                    className={classes.complexBtnImg}
+                                    src="/img/ic_apple.svg"
+                                    alt=""
+                                />
+                                <div className={classes.complexBtnLabelBox}>
+                                    <span>Download on the</span><br/>
+                                    <span className={classes.complexBtnLabel}>App Store</span>
+                                </div>
+                            </div>
+                            <div onClick={() => download_google()} className={classes.complexBtn}>
+                                <img
+                                    className={classes.complexBtnImg}
+                                    src="/img/ic_googleplay.svg"
+                                    alt=""
+                                />
+                                <div className={classes.complexBtnLabelBox}>
+                                    <span className="fs-10">ANDROID APP ON</span><br/>
+                                    <span className={`${classes.complexBtnLabel} fs-20`}>Google Play</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </GridItem>
             </div>
             <FooterSection />
         </div>

@@ -21,6 +21,14 @@ const customInputStyle = {
       borderColor: infoColor
     }
   },
+  underlineNone: {
+    "&:hover:not($disabled):before,&:before": {
+      borderColor: "transparent !important",
+    },
+    "&:after": {
+      borderColor: "transparent"
+    }
+  },
   underlineError: {
     "&:after": {
       borderColor: dangerColor
