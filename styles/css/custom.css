@@ -37,6 +37,19 @@ body {
 .mb-48px {
     margin-bottom: 48px !important;
 }
+
+.mb-64px {
+    margin-bottom: 64px !important;
+}
+
+.mb-84px {
+    margin-bottom: 84px !important;
+}
+
+.mb-108px {
+    margin-bottom: 108px !important;
+}
+
 .text-center {
     text-align: center !important;
 }
@@ -97,12 +110,21 @@ body {
     font-size: 32px !important;
 }
 
+.fs-36 {
+    font-size: 36px !important;
+}
+
+.fs-40 {
+    font-size: 40px !important;
+}
+
 .fs-48 {
     font-size: 48px !important;
 }
 
 .fs-64 {
     font-size: 64px !important;
+    line-height: 4.0rem !important;
 }
 
 .fw-300 {
