@@ -232,6 +232,18 @@ body {
     margin-top: 40px !important;
 }
 
+.mb-50px {
+    margin-bottom: 50px !important;
+}
+
+.w-full {
+    width: 100% !important;
+}
+
+.mr-10px {
+    margin-right: 10px !important;
+}
+
 .table-datatable {
     border: 0 !important;
     border-spacing: 0;
@@ -260,4 +272,29 @@ body {
 
 .empty-table {
     height: 240px !important;
+}
+
+.table-transparent {
+    border: 0 !important;
+    border-spacing: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.table-transparent>thead>tr>th, .table-transparent>tbody>tr>td {
+    height: 60px;
+    color: black;
+    padding: 15px 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wh-36px {
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
 }
