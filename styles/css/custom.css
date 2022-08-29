@@ -367,3 +367,7 @@ body {
 .br-0 {
     border-radius: 0 !important;
 }
+
+.text-dark-blue {
+    color: #174293 !important;
+}
