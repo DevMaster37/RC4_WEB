@@ -350,9 +350,22 @@ body {
     height: 60px;
     color: black;
     padding: 15px 30px;
-    line-height: 30px;
+    line-height: 20px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.table-header-bordered>thead>tr>th{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.table-header-bordered>thead>tr>th:first-child {
+    border-left: 1px solid black;
+}
+
+.table-header-bordered>thead>tr>th:last-child {
+    border-right: 1px solid black;
 }
 
 .wh-36px {
@@ -370,4 +383,78 @@ body {
 
 .text-dark-blue {
     color: #174293 !important;
+}
+
+.input-white {
+    height: 40px !important;
+    padding: 8px 24px !important;
+    line-height: 24px !important;
+    font-size: 15px !important;
+    width: 100%;
+    font-weight: 600;
+    max-width: 200px;
+}
+
+.p-0-40 {
+    padding: 0 40px !important;
+}
+
+.h-40 {
+    height: 40px !important;
+}
+
+.lh-20 {
+    line-height: 20px !important;
+}
+
+.w-fit-content {
+    width: fit-content !important;
+}
+
+.table-responsive {
+    min-height: 240px;
+    overflow-x: auto !important;
+}
+
+.ml-30 {
+    margin-left: 30px !important;
+}
+
+.mb-40px {
+    margin-bottom: 40px !important;
+}
+
+.p-0-60 {
+    padding: 0 60px !important;
+}
+
+.w-280 {
+    width: 280px !important;
+}
+
+.mw-280 {
+    min-width: 280px !important;
+}
+
+.align-item-center {
+    align-items: center !important;
+}
+
+.search-input:before {
+    content: none !important;
+}
+
+.search-input {
+    height: 60px !important;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding-left: 30px;
+    color: black;
+}
+
+.search-input button {
+    margin: 0 -2px 0 0 !important;
+    height: 60px;
+    border-radius: 30px;
+    border: 2px solid black;
 }

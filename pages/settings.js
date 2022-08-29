@@ -9,6 +9,9 @@ import styles from "/styles/jss/nextjs-material-kit/pages/agent";
 import HeaderSection from "/pages-sections/Layout-Sections/HeaderSection";
 import CommonHeaderSection from "/pages-sections/Layout-Sections/CommonHeaderSection";
 import FooterSection from "/pages-sections/Layout-Sections/FooterSection";
+import SalesReportTab from "/pages-sections/SalesReportTab";
+import SubAccountTab from "/pages-sections/SubAccountTab";
+import AgentCommisionTab from "/pages-sections/AgentCommisionTab";
 import CButton from "/components/Custom/CButton";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -125,6 +128,9 @@ export default function HistoryPage(props) {
                         <div key={value}>
                             {tabContent[value]}
                         </div>
+                        {/*<SalesReportTab tableData={[]} />*/}
+                        {/*<SubAccountTab />*/}
+                        <AgentCommisionTab />
                     </div>
                 </GridItem>
             </GridContainer>
