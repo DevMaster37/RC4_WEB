@@ -12,20 +12,31 @@ import FooterSection from "/pages-sections/Layout-Sections/FooterSection";
 import CButton from "/components/Custom/CButton";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
+import CardBody from "../../components/Card/CardBody";
 const useStyles = makeStyles(styles);
 
 export default function HistoryPage(props) {
     const classes = useStyles();
     const {...rest} = props;
     const isGuest = true;
-    const tableData = [];
+    const [value, setValue] = React.useState("sales_report")
+    const tabs = [
+        { key:"sales_report", value: "Sales Report"},
+        { key:"sub_account", value: "Sub Account"},
+        { key:"agent_commission", value: "Agent Commission"},
+        { key:"invoice", value: "Invoice"},
+    ];
 
-    const goToServices = () => {
+    const tabContent = {
+        "sales_report": (<p>asdasd</p>),
+        "sub_account": (<p>2asdasd</p>),
+        "agent_commission": (<p>3asdasd</p>),
+        "invoice": (<p>4asdasd</p>)
+    };
 
-    }
     const linkYourCard = () => {
 
-    }
+    };
 
     return (
         <div>
@@ -98,10 +109,21 @@ export default function HistoryPage(props) {
                     </div>
                     <div className={classes.mainContent}>
                         <div className={classes.mainNabBox}>
-                            <CButton onClick={() => goToServices()} color="white" className="text-dark-blue br-0 mr-10px">Sales Report</CButton>
-                            <CButton onClick={() => goToServices()} color="transparent" className="br-0 mr-10px">Sub Account</CButton>
-                            <CButton onClick={() => goToServices()} color="transparent" className="br-0 mr-10px">Agent Commission</CButton>
-                            <CButton onClick={() => goToServices()} color="transparent" className="br-0">Invoice</CButton>
+                            {
+                                tabs.map((tab) => {
+                                    let classname = "br-0 mr-10px";
+                                    let color = "transparent";
+                                    if (value == tab.key)
+                                    {
+                                        classname += " text-dark-blue";
+                                        color = "white";
+                                    }
+                                    return <CButton onClick={() => setValue(tab.key)} color={color} className={classname}>{tab.value}</CButton>
+                                })
+                            }
+                        </div>
+                        <div key={value}>
+                            {tabContent[value]}
                         </div>
                     </div>
                 </GridItem>

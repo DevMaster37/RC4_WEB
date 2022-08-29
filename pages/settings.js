@@ -5,24 +5,38 @@ import ListItem from "@material-ui/core/ListItem";
 import Button from "/components/CustomButtons/Button";
 import Header from "/components/Header/Header";
 import {makeStyles} from "@material-ui/core/styles";
-import styles from "/styles/jss/nextjs-material-kit/pages/settings_security";
+import styles from "/styles/jss/nextjs-material-kit/pages/agent";
 import HeaderSection from "/pages-sections/Layout-Sections/HeaderSection";
 import CommonHeaderSection from "/pages-sections/Layout-Sections/CommonHeaderSection";
 import FooterSection from "/pages-sections/Layout-Sections/FooterSection";
 import CButton from "/components/Custom/CButton";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
+import CardBody from "../../components/Card/CardBody";
 const useStyles = makeStyles(styles);
 
-export default function SecurityPage(props) {
+export default function HistoryPage(props) {
     const classes = useStyles();
     const {...rest} = props;
     const isGuest = true;
-    const tableData = [];
+    const [value, setValue] = React.useState("sales_report")
+    const tabs = [
+        { key:"sales_report", value: "Sales Report"},
+        { key:"sub_account", value: "Sub Account"},
+        { key:"agent_commission", value: "Agent Commission"},
+        { key:"invoice", value: "Invoice"},
+    ];
+
+    const tabContent = {
+        "sales_report": (<p>asdasd</p>),
+        "sub_account": (<p>2asdasd</p>),
+        "agent_commission": (<p>3asdasd</p>),
+        "invoice": (<p>4asdasd</p>)
+    };
 
     const linkYourCard = () => {
 
-    }
+    };
 
     return (
         <div>
@@ -82,21 +96,36 @@ export default function SecurityPage(props) {
                     <div className={classes.linkCardBox}>
                         <div className={"flex-1"}>
                             <p className={"text-black fs-32 fw-400"}>
-                                Set time to automatically credit your phone or<br/>
-                                send money to family and friends, daily, monthly<br/>
-                                and yearly, make bulk transfer, upload excell and<br/>
-                                let the system handle the rest.<br/>
-                                Pay using Your linked card and Wallet
+                                Hi, George Igwe<br/>
+                                You are few steps away<br/>
+                                from becoming an agent
                             </p>
                         </div>
                         <div className={classes.verticalCenterContainer}>
                             <Button color="white" className={"text-black"} round size="xl" onClick={linkYourCard()}>
-                                <img src="/img/ic_card.svg" className={"w-48px h-48px"}/>&nbsp;Link your Cards
+                                RaIse Payment Invoice
                             </Button>
                         </div>
                     </div>
-                    <br/>
-                    <p className={"text-left fw-600 fs-32"}>Scheduler Service</p>
+                    <div className={classes.mainContent}>
+                        <div className={classes.mainNabBox}>
+                            {
+                                tabs.map((tab) => {
+                                    let classname = "br-0 mr-10px";
+                                    let color = "transparent";
+                                    if (value == tab.key)
+                                    {
+                                        classname += " text-dark-blue";
+                                        color = "white";
+                                    }
+                                    return <CButton onClick={() => setValue(tab.key)} color={color} className={classname}>{tab.value}</CButton>
+                                })
+                            }
+                        </div>
+                        <div key={value}>
+                            {tabContent[value]}
+                        </div>
+                    </div>
                 </GridItem>
             </GridContainer>
             <FooterSection />
