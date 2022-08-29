@@ -423,3 +423,38 @@ body {
 .mb-40px {
     margin-bottom: 40px !important;
 }
+
+.p-0-60 {
+    padding: 0 60px !important;
+}
+
+.w-280 {
+    width: 280px !important;
+}
+
+.mw-280 {
+    min-width: 280px !important;
+}
+
+.align-item-center {
+    align-items: center !important;
+}
+
+.search-input:before {
+    content: none !important;
+}
+
+.search-input {
+    height: 60px !important;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding-left: 30px;
+    color: black;
+}
+
+.search-input button {
+    margin: 0 -2px 0 0 !important;
+    height: 60px;
+    border-radius: 30px;
+    border: 2px solid black;
+}

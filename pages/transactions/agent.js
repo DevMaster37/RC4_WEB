@@ -10,6 +10,8 @@ import HeaderSection from "/pages-sections/Layout-Sections/HeaderSection";
 import CommonHeaderSection from "/pages-sections/Layout-Sections/CommonHeaderSection";
 import FooterSection from "/pages-sections/Layout-Sections/FooterSection";
 import SalesReportTab from "/pages-sections/SalesReportTab";
+import SubAccountTab from "/pages-sections/SubAccountTab";
+import AgentCommisionTab from "/pages-sections/AgentCommisionTab";
 import CButton from "/components/Custom/CButton";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -104,7 +106,9 @@ export default function HistoryPage(props) {
                             <CButton onClick={() => goToServices()} color="transparent" className="br-0 mr-10px">Agent Commission</CButton>
                             <CButton onClick={() => goToServices()} color="transparent" className="br-0">Invoice</CButton>
                         </div>
-                        <SalesReportTab tableData={[]} />
+                        {/*<SalesReportTab tableData={[]} />*/}
+                        {/*<SubAccountTab />*/}
+                        <AgentCommisionTab />
                     </div>
                 </GridItem>
             </GridContainer>
