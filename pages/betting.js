@@ -51,17 +51,17 @@ export default function SendMoneyPage(props) {
             >
                 <HeaderSection isGuest={isGuest} />
                 <CommonHeaderSection isGuest={isGuest} />
-                <GridContainer justify="center" className={"mt-64px mb-48px"}>
+                <GridContainer justify="center" className={"mt-64px mb-108px"}>
                     <GridItem xs={12} sm={6} md={6}>
-                        <Card className={classes[cardAnimaton] + " h-75 " + classes.transparentCard}>
+                        <Card className={classes[cardAnimaton] + " " + classes.transparentCard}>
                             <CardHeader className={classes.cardHeader}>
                                 <div className={classes.featureSubItem}>
                                     <img
-                                        src="/img/ic_send_money.svg"
+                                        src="/img/ic_lottery.svg"
                                         alt=""
                                         className={classes.imgRoundedCircle + " " + classes.imgFluid + " " + classes.featureIcon}
                                     />
-                                    <p className={ `${classes.featureSubLabel}` }>Send Money</p>
+                                    <p className={ `${classes.featureSubLabel}` }>Betting & Lottery</p>
                                 </div>
                             </CardHeader>
                             <CardBody>
@@ -114,55 +114,34 @@ export default function SendMoneyPage(props) {
                             <form className={classes.form}>
                                 <CardHeader className={classes.cardHeader}>
                                     <img
-                                        src="/img/ic_send_money.svg"
+                                        src="/img/ic_lottery.svg"
                                         alt="..."
-                                        className={classes.imgRoundedCircle + " " + classes.imgFluid + " " + classes.avatar}
+                                        className={classes.imgRoundedCircle + " " + classes.imgFluid + " " + classes.featureIcon}
                                     />
-                                    <h4 className={classes.featureSubLabel}>Send Money</h4>
+                                    <h4 className={classes.featureSubLabel}>Betting & Lottery</h4>
                                 </CardHeader>
                                 <CardBody>
-                                    <Select
-                                        id={"country"}
-                                        className="w-100"
-                                        defaultValue={collectionOptions[0]}
-                                        SelectDisplayProps={formatCollectionOptionLabel}
-                                        inputProps={{
-                                            options: collectionOptions
-                                        }}
-                                        instanceId='country'
-                                    />
                                     <CustomInput
-                                        id="country"
+                                        id="provider"
                                         formControlProps={{
                                             fullWidth: true,
                                         }}
                                         inputProps={{
                                             type: "select",
-                                            placeholder: "Country",
+                                            placeholder: "Service Provider",
                                             endAdornment: (
                                                 <img src={"/img/flag_nig.svg"}/>
                                             ),
                                         }}
                                     />
                                     <CustomInput
-                                        id="bank"
+                                        id="customerId"
                                         formControlProps={{
                                             fullWidth: true,
                                         }}
                                         inputProps={{
                                             type: "text",
-                                            placeholder: "Bank",
-                                            autoComplete: "off",
-                                        }}
-                                    />
-                                    <CustomInput
-                                        id="account_number"
-                                        formControlProps={{
-                                            fullWidth: true
-                                        }}
-                                        inputProps={{
-                                            type: "text",
-                                            placeholder: "Account Number",
+                                            placeholder: "Customer ID",
                                             autoComplete: "off",
                                         }}
                                     />
@@ -178,14 +157,13 @@ export default function SendMoneyPage(props) {
                                         }}
                                     />
                                     <CustomInput
-                                        id="what"
+                                        id="phone"
                                         formControlProps={{
-                                            fullWidth: true
+                                            fullWidth: true,
                                         }}
                                         inputProps={{
                                             type: "text",
-                                            placeholder: "What is this for? (Optional)",
-                                            autoComplete: "off",
+                                            placeholder: "Phone Number",
                                         }}
                                     />
                                 </CardBody>

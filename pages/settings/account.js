@@ -5,7 +5,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Button from "/components/CustomButtons/Button";
 import Header from "/components/Header/Header";
 import {makeStyles} from "@material-ui/core/styles";
-import styles from "/styles/jss/nextjs-material-kit/pages/transaction_history";
+import styles from "/styles/jss/nextjs-material-kit/pages/settings_account";
 import HeaderSection from "/pages-sections/Layout-Sections/HeaderSection";
 import CommonHeaderSection from "/pages-sections/Layout-Sections/CommonHeaderSection";
 import FooterSection from "/pages-sections/Layout-Sections/FooterSection";
@@ -14,13 +14,13 @@ import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
 const useStyles = makeStyles(styles);
 
-export default function HistoryPage(props) {
+export default function AccountPage(props) {
     const classes = useStyles();
     const {...rest} = props;
     const isGuest = true;
     const tableData = [];
 
-    const goToReferralLink = () => {
+    const linkYourCard = () => {
 
     }
 
@@ -79,48 +79,24 @@ export default function HistoryPage(props) {
                     </div>
                 </GridItem>
                 <GridItem sm={12} md={9} className={classes.mainContainer}>
-                    <div className={classes.headerBtnContainer}>
-                        <CButton onClick={() => goToReferralLink()} color="info" className="text-white br-0 mr-10px">All Transactions</CButton>
-                        <CButton onClick={() => goToReferralLink()} color="info" className="text-white br-0">Refund</CButton>
-                    </div>
-                    <div className={classes.transactionTabBox}>
-                        <span className={classes.transactionTabLabel}>Transaction for  Current Month</span>
-                    </div>
-                    <div className={classes.transactionContainer}>
-                        <div className={classes.transactionHeader}>Transaction History</div>
-                        <div className={classes.transactionContent}>
-                            <div className="w-full">
-                                <table className="table-white">
-                                    <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>View Sales Report</th>
-                                        <th>
-                                            <CButton onClick={() => goToReferralLink()} color="success" className="text-white br-0">Download</CButton>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {
-                                        tableData.map((transaction, key) => {
-                                            return <tr key={key.toString()}>
-                                                <td>{transaction.id}</td>
-                                                <td>{transaction.etc}</td>
-                                                <td>{transaction.start_date}</td>
-                                                <td>{transaction.end_date}</td>
-                                                <td>{transaction.sale_report}</td>
-                                                <td>{transaction.download}</td>
-                                            </tr>
-                                        })
-                                    }
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div className={classes.linkCardBox}>
+                        <div className={"flex-1"}>
+                            <p className={"text-black fs-32 fw-400"}>
+                                Set time to automatically credit your phone or<br/>
+                                send money to family and friends, daily, monthly<br/>
+                                and yearly, make bulk transfer, upload excell and<br/>
+                                let the system handle the rest.<br/>
+                                Pay using Your linked card and Wallet
+                            </p>
+                        </div>
+                        <div className={classes.verticalCenterContainer}>
+                            <Button color="white" className={"text-black"} round size="xl" onClick={linkYourCard()}>
+                                <img src="/img/ic_card.svg" className={"w-48px h-48px"}/>&nbsp;Link your Cards
+                            </Button>
                         </div>
                     </div>
+                    <br/>
+                    <p className={"text-left fw-600 fs-32"}>Scheduler Service</p>
                 </GridItem>
             </GridContainer>
             <FooterSection />

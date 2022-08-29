@@ -11,9 +11,11 @@ const featurePage = {
   },
   transparentCard: {
     background: "transparent !important",
-    boxShadow: "none"
+    boxShadow: "none",
+    margin: "0px !important",
   },
   blueCard: {
+    height: "100%",
     boxSizing: "border-box",
     background: "#FFFFFF",
     border: "3px solid #00C2FF",
@@ -79,16 +81,25 @@ const featurePage = {
     alignItems: "center",
     justifyContent: "center"
   },
-  vertialCenterContainer: {
+  successIcon: {
+    width: "30%",
+    minWidth: "96px",
+    zIndex: "999",
+  },
+  successContainer: {
+    marginTop: "-120px !important",
+    background: "#F7F7F7",
+    boxShadow: "6px 6px 10px 3px #E1E1E3",
+    borderRadius: "100px",
+    padding: "84px",
+    paddingTop: "160px",
+  },
+  verticalCenterContainer: {
     width: "100%",
     height: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center"
-  },
-  downloadContainer: {
-    marginTop: "50px",
-    marginBottom: "50px",
   },
   complexBtn: {
     display: "flex",

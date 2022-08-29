@@ -26,6 +26,7 @@ export default function SendMoneyPage(props) {
     const classes = useStyles();
     const {...rest} = props;
     const isGuest = true;
+    const isSuccess = true;
     const collectionOptions = [
         { value: "NFTrees", label: "NFTrees", customAbbreviation: ""},
         { value: "Tank Wars Zone NFT", label: "Tank Wars Zone NFT", customAbbreviation: ""},
@@ -51,9 +52,9 @@ export default function SendMoneyPage(props) {
             >
                 <HeaderSection isGuest={isGuest} />
                 <CommonHeaderSection isGuest={isGuest} />
-                <GridContainer justify="center" className={"mt-64px mb-48px"}>
+                <GridContainer justify="center" className={"mt-64px mb-108px"}>
                     <GridItem xs={12} sm={6} md={6}>
-                        <Card className={classes[cardAnimaton] + " h-75 " + classes.transparentCard}>
+                        <Card className={classes[cardAnimaton] + " " + classes.transparentCard}>
                             <CardHeader className={classes.cardHeader}>
                                 <div className={classes.featureSubItem}>
                                     <img
@@ -72,7 +73,7 @@ export default function SendMoneyPage(props) {
                                 </p>
                                 <GridContainer className={classes.downloadContainer + " d-flex"}>
                                     <GridItem xs={12} sm={6} md={6}>
-                                        <div className={classes.vertialCenterContainer}>
+                                        <div className={classes.verticalCenterContainer}>
                                             <div onClick={() => download_apple()} className={classes.complexBtn}>
                                                 <img
                                                     className={classes.complexBtnImg}
@@ -110,13 +111,13 @@ export default function SendMoneyPage(props) {
                         </Card>
                     </GridItem>
                     <GridItem xs={12} sm={6} md={6}>
-                        <Card className={classes[cardAnimaton] + " " + classes.blueCard}>
+                        <Card className={classes[cardAnimaton] + " " + classes.blueCard + (isSuccess ? " d-none" : "")}>
                             <form className={classes.form}>
                                 <CardHeader className={classes.cardHeader}>
                                     <img
                                         src="/img/ic_send_money.svg"
                                         alt="..."
-                                        className={classes.imgRoundedCircle + " " + classes.imgFluid + " " + classes.avatar}
+                                        className={classes.imgRoundedCircle + " " + classes.imgFluid + " " + classes.featureIcon}
                                     />
                                     <h4 className={classes.featureSubLabel}>Send Money</h4>
                                 </CardHeader>
@@ -195,6 +196,28 @@ export default function SendMoneyPage(props) {
                                     </Button>
                                 </CardFooter>
                             </form>
+                        </Card>
+                        <Card className={classes[cardAnimaton] + " h-100 " + classes.blueCard + (isSuccess ? "" : " d-none")}>
+                            <CardHeader className={classes.cardHeader}>
+                            </CardHeader>
+                            <CardBody>
+                                <div className={classes.centerContainer}>
+                                    <img
+                                        src="/img/ic_success.svg"
+                                        alt=""
+                                        className={classes.imgRoundedCircle + " " + classes.imgFluid + " " + classes.successIcon}
+                                    />
+                                    <div className={classes.successContainer + " " + classes.centerContainerr}>
+                                        <p className={"text-primary text-center fs-32"}>Transaction Successful</p>
+                                        <p className={"text-primary text-center fs-20"}>
+                                            N5,000 is on it’s way to<br/>
+                                            Abigeal Freeman
+                                        </p>
+                                    </div>
+                                </div>
+                            </CardBody>
+                            <CardFooter className={classes.cardFooter}>
+                            </CardFooter>
                         </Card>
                     </GridItem>
                 </GridContainer>
