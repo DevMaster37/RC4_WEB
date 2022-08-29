@@ -9,6 +9,7 @@ import styles from "/styles/jss/nextjs-material-kit/pages/agent";
 import HeaderSection from "/pages-sections/Layout-Sections/HeaderSection";
 import CommonHeaderSection from "/pages-sections/Layout-Sections/CommonHeaderSection";
 import FooterSection from "/pages-sections/Layout-Sections/FooterSection";
+import SalesReportTab from "/pages-sections/SalesReportTab";
 import CButton from "/components/Custom/CButton";
 import GridContainer from "/components/Grid/GridContainer.js";
 import GridItem from "/components/Grid/GridItem.js";
@@ -103,6 +104,7 @@ export default function HistoryPage(props) {
                             <CButton onClick={() => goToServices()} color="transparent" className="br-0 mr-10px">Agent Commission</CButton>
                             <CButton onClick={() => goToServices()} color="transparent" className="br-0">Invoice</CButton>
                         </div>
+                        <SalesReportTab tableData={[]} />
                     </div>
                 </GridItem>
             </GridContainer>
